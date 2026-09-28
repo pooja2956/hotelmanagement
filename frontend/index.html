@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Hotel Management System</h1>
+
+    <div class="container">
+        <h2 id="formTitle">Add Room</h2>
+
+        <form id="roomForm">
+            <input type="text" id="room_number" placeholder="Room Number" required>
+            <input type="text" id="guest_name" placeholder="Guest Name" required>
+            <input type="text" id="room_type" placeholder="Room Type" required>
+            <input type="number" id="price" placeholder="Price" min="0" required>
+            <select id="status" required>
+                <option value="">Select Status</option>
+                <option value="Available">Available</option>
+                <option value="Occupied">Occupied</option>
+                <option value="Maintenance">Maintenance</option>
+            </select>
+
+            <button type="submit" id="submitButton">Add Room</button>
+            <button type="button" id="cancelButton" class="cancel" hidden>Cancel</button>
+        </form>
+
+        <h2>Room List</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Room Number</th>
+                    <th>Guest Name</th>
+                    <th>Room Type</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="roomList"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
